@@ -1,0 +1,106 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6e7cfc, #00d2ff);
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+/* Calculator container */
+.calculator {
+  width: 400px;
+  background: linear-gradient(145deg, #4e4e50, #2f2f32);
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Display section */
+#display {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  font-size: 2.5em;
+  text-align: right;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Button grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Button styling */
+.button {
+  padding: 20px;
+  font-size: 1.8em;
+  background-color: #333;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover {
+  background-color: #575757;
+  transform: scale(1.05);
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+/* Operator buttons */
+.button[data-action="operator"] {
+  background-color: #ff8c00;
+}
+
+.button[data-action="operator"]:hover {
+  background-color: #e67e22;
+}
+
+.button[data-action="calculate"] {
+  background-color: #27ae60;
+}
+
+.button[data-action="calculate"]:hover {
+  background-color: #2ecc71;
+}
+
+.button[data-action="clear"] {
+  background-color: #e74c3c;
+}
+
+.button[data-action="clear"]:hover {
+  background-color: #c0392b;
+}
+
+/* Additional styles for the "0" button */
+.button.span-two {
+  grid-column: span 2;
+}
+
+/* Add smooth shadow and transition effects to the entire calculator */
+.calculator:hover {
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
